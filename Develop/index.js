@@ -58,28 +58,26 @@ const questions = [
     }
 ];
 
-inquirer.prompt(questions)
-.then((answers) => {
-    //console.info("Answer:",  answers);
-    const readmeDetails =generateMarkdown(answers);
-    writeToFile(`README.md`, readmeDetails);
-});
-
-
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, function(err){
         if (err){
             console.log("could not save file", err);
         } else{
-            console.log(`Success: new README file has been generated. File is:${fileName}"`);
+            console.log(`Success: new README file has been generated. File is: ${fileName}"`);
         }
     })
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+    .then((answers) => {
+        //console.info("Answer:",  answers);
+        const readmeDetails = generateMarkdown(answers);
+        writeToFile(`README.md`, readmeDetails);
+    });
+}
 
 // Function call to initialize app
 init();
