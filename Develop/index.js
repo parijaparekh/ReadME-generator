@@ -17,11 +17,6 @@ const questions = [
         message: "Please enter the project description:"
     },
     {
-        type: "input", 
-        name: "installation", 
-        message: "Enter the installation instructions here:"
-    },
-    {
         type: "input",
         name: "usage",
         message: "Please enter the usage instructions here:" 
@@ -31,6 +26,11 @@ const questions = [
         type: "input", 
         name: "contributions", 
         message: "Enter the contribution guidelines:"
+    },
+    {
+        type: "input", 
+        name: "installation", 
+        message: "Enter the installation instructions here:"
     },
     {
         type: "input", 
