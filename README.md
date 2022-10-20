@@ -10,7 +10,7 @@
   - [Questions](#Questions)
 
   ## Description
-  This application genrates a markdown readme file based on user provided inputs 
+  This application generates a markdown readme file based on user provided inputs 
 
   ## Usage
   Enter the information about the project as and when prompted by the application.
